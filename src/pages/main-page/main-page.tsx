@@ -1,34 +1,77 @@
-import React, { useState } from 'react';
-
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
-import tsLogo from '/ts.svg';
-import './main-page.css';
-
-export const MainPage: React.FC = () => {
-    const [count, setCount] = useState(0);
-
+import {
+    MenuFoldOutlined,
+    MenuUnfoldOutlined,
+    UploadOutlined,
+    UserOutlined,
+    VideoCameraOutlined,
+  } from '@ant-design/icons';
+  import { Layout, Menu } from 'antd';
+  import React, { useState } from 'react';
+  const { Header, Sider, Content } = Layout;
+  export const MainPage: React.FC = () => {
+    const [collapsed, setCollapsed] = useState(false);
     return (
-        <>
-            <div>
-                <a href='https://vitejs.dev' target='_blank'>
-                    <img src={viteLogo} className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://react.dev' target='_blank'>
-                    <img src={reactLogo} className='logo react' alt='React logo' />
-                </a>
-                <a href='https://www.typescriptlang.org/' target='_blank'>
-                    <img src={tsLogo} className='logo' alt='TS logo' />
-                </a>
-            </div>
-            <h1>Vite + React + TS</h1>
-            <div className='card'>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/pages/main-page.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-        </>
+        <div className='container'>
+      <Layout>
+        <Sider
+            theme="light"
+            trigger={null} 
+            collapsible 
+            collapsed={collapsed}
+            >
+          <div className="logo" />
+          <Menu
+            theme="light"
+            mode="inline"
+            items={[
+              {
+                key: '1',
+                icon: <UserOutlined />,
+                label: 'Календарь',
+              },
+              {
+                key: '2',
+                icon: <VideoCameraOutlined />,
+                label: 'Тренировки',
+              },
+              {
+                key: '3',
+                icon: <UploadOutlined />,
+                label: 'Достижения',
+              },
+              {
+                key: '4',
+                icon: <UploadOutlined />,
+                label: 'Профиль',
+              },
+            ]}
+          />
+        </Sider>
+        <Layout className="site-layout">
+          <Header
+            className="site-layout-background"
+            style={{
+              padding: 0,
+            }}
+          >
+            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+              className: 'trigger',
+              onClick: () => setCollapsed(!collapsed),
+            })}
+          </Header>
+          <Content
+            className="site-layout-background"
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              minHeight: 280,
+            }}
+          >
+            Content
+          </Content>
+        </Layout>
+      </Layout>
+      </div>
     );
-};
+  };
+  
