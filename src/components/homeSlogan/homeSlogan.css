@@ -1,0 +1,32 @@
+.slogan {
+    background-color: #fff;
+    padding: 24px;
+    max-width: 752px;
+    margin-bottom: 16px;
+    padding-top: 26px;
+    padding-left: 24px;
+}
+
+.slogan h4 {
+    color: rgb(38, 38, 38);
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .slogan {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .slogan {
+        padding: 16px;
+    }
+}

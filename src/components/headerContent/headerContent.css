@@ -1,0 +1,132 @@
+.header {
+    background: rgb(240, 245, 255);
+    padding: 16px 24px 21px;
+    color: rgb(38, 38, 38);
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+    gap: 26px;
+}
+
+.title {
+    padding: 0;
+    flex-grow: 1;
+    color: rgb(38, 38, 38);
+    font-family: Inter;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.settings {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .title {
+        display: block;
+        color: rgb(38, 38, 38);
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 14px;
+    }
+
+    .title-wrapper {
+        gap: 10px;
+    }
+
+    .title-wrapper {
+        padding-right: 0;
+    }
+
+    .settings {
+        padding-right: 14px;
+    }
+}
+@media screen and (max-width: 834px) {
+    .settings-icon.anticon-setting {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .title {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    
+
+    .settings .icon-title {
+        display: none;
+    }
+    .settings-icon.anticon-setting {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border: 1px solid rgb(217, 217, 217);
+        border-radius: 50%;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: rgb(255, 255, 255);
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .breadcrumbs {
+        margin-bottom: 6px;
+    }
+
+   
+
+    .settings .icon-title {
+        display: none;
+    }
+    .settings {
+        padding-right: 0;
+        position: relative;
+        top: -6px;
+    }
+}
+
+

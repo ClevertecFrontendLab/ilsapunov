@@ -1,0 +1,1 @@
+export { HomeSlogan } from '../homeSlogan';
